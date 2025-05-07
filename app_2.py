@@ -51,8 +51,6 @@ load_dotenv()
 
 # Set OpenAI API key
 openai.api_key = os.getenv('OPENAI_API_KEY')  # Prefer environment variable for security
-# Hardcoded key (commented out for security best practices)
-# openai.api_key = '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'
 
 # Generate answer using OpenAI API
 def generate_answer(query):
