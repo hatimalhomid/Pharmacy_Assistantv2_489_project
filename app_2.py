@@ -50,7 +50,6 @@ def search(query_text, top_k=1):
 load_dotenv()
 
 # Set OpenAI API key
-openai.api_key = os.getenv('OPENAI_API_KEY')  # Prefer environment variable for security
 
 # Generate answer using OpenAI API
 def generate_answer(query):
