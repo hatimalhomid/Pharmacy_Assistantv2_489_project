@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacovigilance Smart Assistant (Beta v0.2)</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* Added styles for flexbox layout */
+        .controls {
+            display: flex;
+            align-items: center; /* Aligns buttons vertically centered */
+            gap: 10px; /* Space between buttons */
+            margin-top: 10px; /* Add some space above the controls */
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <h1>Pharmacovigilance Smart Assistant (Beta v0.2)</h1>``A
+            <button id="theme-toggle" class="theme-button">🌙</button>
+        </div>
+        <div id="messages" class="messages"></div>
+
+        <div class="example-usage">
+            <h2>Common Questions You Can Ask:</h2>
+            <p>Here are some example queries for assistance:</p>
+            <ul class="example-list">
+                <li>Does <strong>insert Medication Name</strong> cause <strong>insert Adverse Drug Reaction</strong>?</li>
+                <li>What are the side effects of <strong>Medication Name</strong>?</li>
+                <li>How should I store <strong>Medication Name</strong>?</li>
+                <li>Is <strong>Medication Name</strong> safe to use during pregnancy?</li>
+                <li>What should I do if I miss a dose of <strong>Medication Name</strong>?</li>
+            </ul>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="query" placeholder="Type your pharmacy-related question here..." class="input-box">
+            <button id="send-btn" class="button">Send</button>
+            <button id="start-stt-btn" class="button icon-button">🎤</button>
+        </div>
+        <div class="controls">
+            <button id="start-tts-btn" class="control-btn">🔊 Start Speech</button>
+            <button id="stop-tts-btn" class="control-btn">❌ Stop Speech</button>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="static/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* Default light theme */
+:root {
+    --background-color: #ffffff; /* Light background */
+    --text-color: #000000; /* Dark text */
+    --button-background: #4CAF50; /* Button background */
+    --button-text: #ffffff; /* Button text */
+    --input-background: #f5f5f5; /* Input field background */
+    --container-background: #e9f7fe; /* Light theme unique container color (light blue) */
+    --header-background: #f0f4f8; /* Header background */
+    --header-text-color: #2c3e50; /* Darker text for header */
+    --example-background: #f9f9f9; /* Example usage background */
+    --example-text-color: #000000; /* Dark text for examples */
+    --highlight-color: #2980b9; /* Accent color for highlights */
+}
+
+/* Dark theme */
+.dark-theme {
+    --background-color: #000000; /* Pure black background */
+    --text-color: #d7d9d9; /* Light gray text */
+    --button-background: #3e3e3e; /* Dark gray button background */
+    --button-text: #f0f0f0; /* Light button text */
+    --input-background: #1c1c1e; /* Darker input field background */
+    --container-background: #222222; /* Dark theme unique container color (dark gray) */
+    --header-background: #1a1a1a; /* Dark header background */
+    --header-text-color: #f0f0f0; /* Light text for header */
+    --example-background: #333333; /* Darker example usage background */
+    --example-text-color: #d7d9d9; /* Light text for examples */
+    --highlight-color: #007aff; /* Accent color for highlights */
+
+    /* User query and response colors */
+    --user-message-background: #00796b; /* Teal for user messages */
+    --user-message-text-color: #ffffff; /* White text for user messages */
+    --chatbot-message-background: #444444; /* Darker gray for chatbot responses */
+    --chatbot-message-text-color: #d7d9d9; /* Light gray text for chatbot responses */
+}
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 99vh; /* Increased size by 10% */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--container-background); /* Unique container color for both themes */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); /* Changed shadow color to soft gray */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Removed blue square border */
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: var(--header-background);
+    border-radius: 8px;
+    color: var(--header-text-color);
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--header-text-color);
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+.theme-button {
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--header-text-color);
+}
+
+/* Messages container */
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: var(--example-background); /* Lighter background for message area in light theme */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message {
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 75%;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for individual messages */
+    overflow-wrap: break-word;
+}
+
+/* User message styles */
+.user-message {
+    align-self: flex-end;
+    background-color: var(--user-message-background); /* User message background */
+    color: var(--user-message-text-color); /* User message text color */
+}
+
+/* Chatbot message styles */
+.chatbot-message {
+    align-self: flex-start;
+    background-color: var(--chatbot-message-background); /* Chatbot response background */
+    color: var(--chatbot-message-text-color); /* Chatbot response text color */
+}
+
+/* Example usage section */
+.example-usage {
+    background-color: var(--example-background);
+    padding: 12px; /* Reduced padding for smaller size */
+    border-radius: 8px;
+    margin-top: 15px;
+    color: var(--example-text-color);
+    font-size: 0.88em; /* Reduced font size for smaller appearance */
+}
+
+.example-usage h2 {
+    color: var(--highlight-color);
+    font-size: 1.6em; /* Slightly smaller heading */
+    margin-bottom: 10px;
+}
+
+.example-usage ul {
+    padding-left: 20px;
+}
+
+.example-usage li {
+    margin-bottom: 8px;
+}
+
+.example-usage strong {
+    color: var(--highlight-color); /* Accent color for medication names */
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.input-box {
+    flex: 1;
+    padding: 17px; /* Increased size by 10% */
+    border-radius: 8px;
+    border: 2px solid #555;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    transition: border 0.3s ease;
+    font-size: 1.1em; /* Increased font size */
+}
+
+.input-box:focus {
+    border-color: var(--highlight-color);
+}
+
+/* Buttons */
+.button {
+    padding: 17px 22px; /* Increased size by 10% */
+    border-radius: 8px;
+    border: none;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.1em; /* Slightly larger button text */
+}
+
+.button:hover {
+    background-color: #2196F3;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+.control-btn {
+    padding: 11px 17px; /* Increased size by 10% */
+    border-radius: 8px;
+    border: none;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.1em; /* Larger button text */
+}
+
+.control-btn:hover {
+    background-color: #2196F3;
+}
+
+.control-btn:active {
+    transform: scale(0.98);
+}
+
+.icon-button {
+    font-size: 1.2em;
+}
