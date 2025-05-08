@@ -40,6 +40,28 @@ We have used the `all-mpnet-base-v2` embedder from **Sentence Transformers**. Th
 * **Low Latency**: Optimized for quick inference, crucial for real-time application responses.
 * **Versatile Usage**: Well-suited for tasks like search, clustering, and information retrieval, making it ideal for medical data exploration.
 
+## Vector Storage and Retrieval
+### FAISS Index Implementation
+We leverage Facebook AI Similarity Search (FAISS) to efficiently store and retrieve vector embeddings:
+
+- Index Type: The application uses a flat index for maximum precision in similarity searches
+- Vector Dimensions: Embeddings are stored as 768-dimensional vectors
+- Storage Format: Pre-computed embeddings are saved in the faiss_index.index file
+- Retrieval Mechanism: When a query is processed, it's:
+
+## Converted to an embedding vector
+- Compared against all stored vectors in the FAISS index
+- Top-K most similar vectors are retrieved based on cosine similarity
+- Corresponding pharmaceutical information is then presented to the user
+
+
+
+Benefits of FAISS Implementation
+
+Performance: Enables sub-second retrieval from millions of medication descriptions
+Scalability: Can handle growing pharmaceutical databases efficiently
+Accuracy: Preserves semantic meaning during search operations
+Memory Efficiency: Optimized storage of vector data
   
 
 ## Application Versions
