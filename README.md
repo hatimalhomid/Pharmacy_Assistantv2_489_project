@@ -73,7 +73,6 @@ For app_2.py:
 Copy code
 OPENAI_API_KEY=your_openai_api_key_here
 Project Structure
-Copy code
 Pharmacy_Assistantv_CSC489_project/
 ├── app.py                # Main application (Gemini version)
 ├── app_2.py              # Alternative version (GPT version)
