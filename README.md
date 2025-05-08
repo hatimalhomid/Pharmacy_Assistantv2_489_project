@@ -29,14 +29,14 @@ Download and place the following files in a `data` directory in your project roo
 
 The repository contains two versions of the application:
 
-### 1. `app.py` (Recommended)
+### 1. `app.py` (Free)
 - Uses Google's Gemini-2.0-Flash-Lite model
 - Free to use
 - Features enhanced error handling and detailed logging
 - Comprehensive debugging capabilities
 - Good performance for general queries
 
-### 2. `app_2.py` (Alternative)
+### 2. `app_2.py` (Higher Performance Enterprise)
 - Uses OpenAI's GPT model
 - Requires paid API access
 - Superior performance, especially with GPT-4
