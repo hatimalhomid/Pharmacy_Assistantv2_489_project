@@ -58,19 +58,18 @@ git clone https://github.com/hatimalhomid/pharmacy_assistantv2_489_project.git
 cd pharmacy_assistantv2_489_project
 Create and activate a virtual environment:
 bash
-Copy code
+
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 Install required packages:
 bash
-Copy code
+
 pip install -r requirements.txt
 Create a .env file and add your API key: For app.py:
-Copy code
+
 GOOGLE_API_KEY=your_google_api_key_here
 For app_2.py:
 
-Copy code
 OPENAI_API_KEY=your_openai_api_key_here
 Project Structure
 Pharmacy_Assistantv_CSC489_project/
@@ -112,12 +111,11 @@ Choose which version to run:
 For Gemini version (Free):
 
 bash
-Copy code
 python app.py
 For GPT version (Paid):
 
 bash
-Copy code
+
 python app_2.py
 Open a web browser and navigate to http://localhost:8080
 Technical Stack
