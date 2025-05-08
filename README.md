@@ -1,4 +1,4 @@
-""# Pharmacy Assistant v2
+# Pharmacy Assistant v2
 
 A smart pharmacovigilance assistant that provides accurate information about medications, side effects, and pharmaceutical queries using advanced natural language processing and semantic search capabilities.
 
@@ -181,4 +181,4 @@ The assistant can handle queries such as:
 * "How should I store \[Medication Name]?"
 * "Is \[Medication Name] safe during pregnancy?"
 * "What should I do if I miss a dose of \[Medication Name]?"
-  ""
+  
