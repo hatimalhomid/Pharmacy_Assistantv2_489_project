@@ -74,20 +74,25 @@ Copy code
 OPENAI_API_KEY=your_openai_api_key_here
 Project Structure
 Copy code
-pharmacy_assistantv2_489_project/
-├── app.py              # Main application (Gemini version)
-├── app_2.py           # Alternative version (GPT version)
-├── requirements.txt    # Project dependencies
-├── templates/         
-│   └── index.html     # Web interface template
-|__static/
-    |__style.css   # Design
-    |__scripts/
-        |__app.js # for web functionality , STT and TTS
-├── data/              # Create this directory and add downloaded files
+Pharmacy_Assistantv_CSC489_project/
+├── app.py                # Main application (Gemini version)
+├── app_2.py              # Alternative version (GPT version)
+├── requirements.txt      # Project dependencies
+│
+├── templates/            # Web interface templates
+│   └── index.html        # Main HTML template
+│
+├── static/               # Static assets (CSS, JS)
+│   ├── style.css         # Design
+│   └── scripts/
+│       └── app.js        # For web functionality, STT, and TTS
+│
+├── data/                 # Data directory for downloaded files
 │   ├── extracted_texts_df_ALL.csv
 │   └── faiss_index.index
-└── README.md
+│
+└── README.md             # Project documentation
+
 Features
 Core Features
 Natural language query processing
