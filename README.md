@@ -1,7 +1,7 @@
 # Pharmacy Assistant v2
 
 A smart pharmacovigilance assistant that provides accurate information about medications, side effects, and pharmaceutical queries using advanced natural language processing and semantic search capabilities.
-
+---
 ## Data Source
 
 The application's pharmaceutical data has been comprehensively sourced from:
@@ -27,6 +27,20 @@ Download and place the following files in a `data` directory in your project roo
 
 * `extracted_texts_df_ALL.csv` (Raw data)
 * `faiss_index.index` (Embedded data)
+---
+  ## Embeddings
+
+We have used the `all-mpnet-base-v2` embedder from **Sentence Transformers**. This model was chosen for its exceptional performance in capturing semantic meaning, which is crucial for reliable and accurate pharmacovigilance queries.
+
+### Why `all-mpnet-base-v2`?
+
+* **High Semantic Accuracy**: It captures both syntactic and semantic nuances effectively.
+* **Efficient Embeddings**: Provides dense vector representations ideal for fast similarity search with FAISS.
+* **State-of-the-Art Performance**: It consistently outperforms other models in semantic textual similarity tasks.
+* **Low Latency**: Optimized for quick inference, crucial for real-time application responses.
+* **Versatile Usage**: Well-suited for tasks like search, clustering, and information retrieval, making it ideal for medical data exploration.
+
+  
 
 ## Application Versions
 
@@ -133,17 +147,7 @@ Pharmacy_Assistantv_CSC489_project/
 * Comprehensive error handling (in app.py)
 * Detailed logging system (in app.py)
 
-## Embeddings
 
-We have used the `all-mpnet-base-v2` embedder from **Sentence Transformers**. This model was chosen for its exceptional performance in capturing semantic meaning, which is crucial for reliable and accurate pharmacovigilance queries.
-
-### Why `all-mpnet-base-v2`?
-
-* **High Semantic Accuracy**: It captures both syntactic and semantic nuances effectively.
-* **Efficient Embeddings**: Provides dense vector representations ideal for fast similarity search with FAISS.
-* **State-of-the-Art Performance**: It consistently outperforms other models in semantic textual similarity tasks.
-* **Low Latency**: Optimized for quick inference, crucial for real-time application responses.
-* **Versatile Usage**: Well-suited for tasks like search, clustering, and information retrieval, making it ideal for medical data exploration.
 
 ## Running the Application
 
